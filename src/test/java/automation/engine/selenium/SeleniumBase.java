@@ -89,7 +89,7 @@ public class SeleniumBase {
     }
 
     public void explicitWait(By locator) {
-        WebDriverWait wait = new WebDriverWait(driver,20);
+        WebDriverWait wait = new WebDriverWait(driver,5);
         wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(locator)));
     }
     public void sleep(int millis) throws InterruptedException {

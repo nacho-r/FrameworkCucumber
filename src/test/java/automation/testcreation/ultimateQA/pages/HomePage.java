@@ -24,19 +24,17 @@ public class HomePage extends SeleniumBase {
         click(signIn);
     }
 
-    public void validacionNombre(String text){
-
+    public void validacionNombre(String text) throws InterruptedException {
+        Thread.sleep(5000);
+        name = By.xpath("//div/descendant::a[contains(text(),\""+text+"\")]");
         String user = getText(name);
         Assert.assertEquals(text, user);
 
     }
 
     public void ingresoCurso(String curso) throws Exception {
+        Thread.sleep(5000);
         section  = By.xpath("//div/descendant::h3[contains(text(),\""+curso+"\")]");
-        if (!isDisplayed(section)){
-            throw new Exception("Elemento no Encontrado");
-        }
-
         click(section);
     }
 

@@ -41,7 +41,7 @@ public class LoginPage extends SeleniumBase{
     }
 
     public void mensjError(String msj) throws Exception {
-
+        Thread.sleep(5000);
         String error = getText(msjError);
         Assert.assertEquals(msj, error);
     }

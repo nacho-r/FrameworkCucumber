@@ -20,7 +20,7 @@ public class LoginExitosoSteps {
     }
 
     @Then("al presionar el boton Sign In mostrara {string} en Inicio.")
-    public void al_presionar_el_boton_sign_in_mostrara_en_inicio(String string) {
+    public void al_presionar_el_boton_sign_in_mostrara_en_inicio(String string) throws InterruptedException {
         home.validacionNombre(string);
     }
 }

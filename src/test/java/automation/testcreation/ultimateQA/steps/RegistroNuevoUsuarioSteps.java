@@ -39,7 +39,7 @@ public class RegistroNuevoUsuarioSteps {
     }
 
     @Then("al presionar el boton Sign Up mostrara {string} en Inicio.")
-    public void al_presionar_el_boton_sign_up_mostrara_en_inicio(String string){
+    public void al_presionar_el_boton_sign_up_mostrara_en_inicio(String string) throws InterruptedException {
         home.validacionNombre(string);
     }
 

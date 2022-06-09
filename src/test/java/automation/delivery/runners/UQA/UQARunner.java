@@ -5,8 +5,8 @@ import io.cucumber.testng.CucumberOptions;
 import org.testng.annotations.DataProvider;
 
 @CucumberOptions(
-        features = {"src/test/java/automation/testcreation/google/features"},
-        glue = {"automation.testcreation.google.steps","automation.engine.bdd"},
+        features = {"src/test/java/automation/testcreation/ultimateQA/features"},
+        glue = {"automation.testcreation.ultimateQA.steps","automation.engine.bdd"},
         plugin = {"pretty","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
                 "timeline:test-output-thread"},
         tags = ""
