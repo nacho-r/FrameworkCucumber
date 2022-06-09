@@ -84,21 +84,19 @@ public class SeleniumBase {
      * @return : verdadero o falso
      */
     public Boolean isDisplayed(By locator) {
-            implicitWait(locator);
+            explicitWait(locator);
             return driver.findElement(locator).isDisplayed();
     }
 
-    public void implicitWait(By locator) {
-        WebDriverWait wait = new WebDriverWait(driver,5);
+    public void explicitWait(By locator) {
+        WebDriverWait wait = new WebDriverWait(driver,20);
         wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(locator)));
     }
-
-    public void explicitWait(int millis) throws InterruptedException {
+    public void sleep(int millis) throws InterruptedException {
         Thread.sleep(millis);
     }
-
     public Boolean isEnabled(By locator) {
-            implicitWait(locator);
+            explicitWait(locator);
             return driver.findElement(locator).isEnabled();
     }
 
